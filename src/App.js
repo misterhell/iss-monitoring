@@ -12,6 +12,11 @@ class App extends React.Component {
     },
 
     map: {
+      behaviors: {
+        Drag: {
+
+        }
+      },
       center: [0, 0],
       zoom: 1,
     }

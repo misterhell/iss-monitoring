@@ -1,8 +1,7 @@
-const { src, task } = require('gulp');
-const deploy = require('gulp-gh-pages');
+var gulp = require('gulp');
+var ghPages = require('gulp-gh-pages');
 
-
-/**
- * Push build to gh-pages
- */
-task('deploy', () => src('./build/**/*').pipe(deploy({ force: true })));
+gulp.task('deploy', function () {
+    return gulp.src('./build/**/*')
+        .pipe(ghPages());
+});
